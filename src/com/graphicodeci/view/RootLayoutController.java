@@ -3,7 +3,6 @@ package com.graphicodeci.view;
 import com.graphicodeci.main.Main;
 import javafx.fxml.FXML;
 import javafx.stage.DirectoryChooser;
-import javafx.stage.FileChooser;
 
 import javax.swing.text.html.ListView;
 import java.awt.*;
