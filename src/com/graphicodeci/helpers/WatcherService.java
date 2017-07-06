@@ -21,7 +21,7 @@ public class WatcherService extends Service<Path> {
 
     private WatchService watcher ;
     private Path monitoredPath;
-    private BooleanProperty stopTaskFlag;
+    private final BooleanProperty stopTaskFlag;
 
     /**
      * Construstor with oarameter
@@ -65,7 +65,7 @@ public class WatcherService extends Service<Path> {
             @Override
             protected Path call() throws Exception {
 
-                System.out.println("Startin monitoring...");
+                System.out.println("Starting monitoring...");
 
                 WatchKey key = initWatcher();
                 if (key == null) {
@@ -101,10 +101,12 @@ public class WatcherService extends Service<Path> {
                         }
 
                         //Loop end if ....
-                        if(!stopTaskFlag.get()) break;
+                        if(stopTaskFlag.get()) {
+                            System.out.println("Stopping monitoring...");
+                            break;
+                        }
                     }
-
-                    return null;
+                    key.reset();
                 }
 
                 return null;
