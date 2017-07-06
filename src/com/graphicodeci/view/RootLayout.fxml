@@ -11,7 +11,7 @@
          <children>
             <Button fx:id="chooseDirectoryButton" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleChooseDirectory" text="Choose directory" AnchorPane.leftAnchor="14.0" />
             <Button fx:id="startWatcherButton" layoutX="130.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleStartWatcher" text="Start watcher" />
-            <Button fx:id="stopWatcherButton" layoutX="216.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleStopMonitorig" text="Stop watcher" />
+            <Button fx:id="stopWatcherButton" layoutX="216.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleStopMonitoring" text="Stop watcher" />
          </children>
       </HBox>
       <ListView fx:id="monitorListview" layoutX="14.0" layoutY="93.0" prefHeight="245.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
